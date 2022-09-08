@@ -33,7 +33,7 @@ console.log(basket)
 
 ////
 ///
-
+/* //////////////////This one was kicking my tail. Will return to this one////////////
 const  maxItems = 5;
 
 function isFull(){
@@ -69,3 +69,21 @@ console.log("The basket already has", basket.length, "items (expect false)", add
 empty();
 console.log(basket);
 console.log("The basket is empty and we can add an item (expect true)", addItem('apple fritter'));
+
+*/
+
+function removeItem(item){
+    if(basket.indexOf(item)===-1){
+        return null
+    }else{
+       return basket.splice(basket.indexOf(item), 1);
+    }
+}
+
+basket =['toothpaste', 'soap', 'hairspray', 'deodorant'];
+console.log(basket)
+console.log("This item was in the basket (expect removed item", removeItem("hairspray"));
+
+console.log('This item was not in the basket (expect "null")', removeItem('banana'))
+
+
