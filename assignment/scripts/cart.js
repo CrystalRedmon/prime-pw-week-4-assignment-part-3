@@ -34,26 +34,26 @@ console.log(basket)
 ////
 ///
 
-const maxItems = 5
+const  maxItems = 5;
 
 function isFull(){
-if(basket<maxItems){
-    return false;
-}else
+if(basket>=maxItems){
     return true;
+}else{
+    return false;
+}
 };
 
 console.log(basket);
 console.log("The basket is empty. (expect false)", isFull());
 //Adding items to basket to test the isFull function
-basket= ['pie', 'apples', 'juice', 'greens', 'bread'];
+basket= ['pie', 'apples', 'greens', 'bread', 'grapes'];
 console.log('Added five items (expect true)', isFull());
 
 
 
-
 function addItems(item){
-    if(isFull===true){
+    if(isFull()===true){
     return false;
     }else{
     basket.push(item);
