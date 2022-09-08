@@ -3,6 +3,7 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 
 let basket=[];
+console.log(basket);
 ///
 function addItem(item){
     basket.push(item);
@@ -10,7 +11,8 @@ function addItem(item){
 }
 
 addItem('bananas');
-console.log(basket);
+console.log('Adding apples (expect true)', addItem('apples'));
+console.log(`Basket is now ${basket}`);
 
 ////
 function listItems(){
@@ -18,7 +20,7 @@ function listItems(){
         console.log(basket[i]);
     }
 }
-addItem('milk')
+addItem('milk'); ///added another item and 
 listItems();
 ////
 
@@ -28,4 +30,42 @@ function empty(){
 
 empty();
 console.log(basket)
+
 ////
+///
+
+const maxItems = 5
+
+function isFull(){
+if(basket<maxItems){
+    return false;
+}else
+    return true;
+};
+
+console.log(basket);
+console.log("The basket is empty. (expect false)", isFull());
+//Adding items to basket to test the isFull function
+basket= ['pie', 'apples', 'juice', 'greens', 'bread'];
+console.log('Added five items (expect true)', isFull());
+
+
+
+
+function addItems(item){
+    if(isFull===true){
+    return false;
+    }else{
+    basket.push(item);
+    return true;
+    }  
+    
+}
+
+
+console.log("The basket already has", basket.length, "items (expect false)", addItems('berries'));
+
+//Reset basket to empty to test addItem function 
+empty();
+console.log(basket);
+console.log("The basket is empty and we can add an item (expect true)", addItem('apple fritter'));
