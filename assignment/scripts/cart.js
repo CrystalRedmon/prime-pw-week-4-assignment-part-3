@@ -31,9 +31,10 @@ function empty(){
 empty();
 console.log(basket)
 ////////////////////////////////////////////////
-
+//////// Stretch Goals
+//Q1
 const  maxItems = 5;
-
+//Q2
 function isFull(){
 if(basket.length<maxItems){
     return false;
@@ -41,16 +42,16 @@ if(basket.length<maxItems){
     return true
 }
 };
-console.log(maxItems, basket.length);
+console.log("The basket has", basket.length, "items and the basket can hold", maxItems, "items.");
 console.log("The basket is empty. (expect false)", isFull());
 //Adding items to basket to test the isFull function
 basket= ['pie', 'apples', 'greens', 'bread', 'grapes'];
-console.log(basket.length, maxItems);
+console.log("The basket has", basket.length, "items and the basket can hold", maxItems, "items.");
 
-console.log('Added five items (expect true)', isFull());
+console.log('Is the basket full? (expect true)', isFull());
 
-
-
+///////Q3
+///////////////Updated addItems function
 function addItems(item){
     if(isFull()===true){    
         return false; 
@@ -60,25 +61,20 @@ function addItems(item){
         }  
 }
     
-console.log("The basket already has", basket.length, "items (expect false)", addItems('berries'));
+console.log("Were we able to add the berries to the basket(expect false)?", addItems('berries'));
 
 //Reset basket to empty to test addItem function 
 empty();
-console.log(basket);
-console.log("The basket is empty and we can add an item (expect true)", addItem('apple fritter'));
+console.log(basket.length);
+console.log("The basket is empty. Can we can add an item now? (expect true)", addItem('apple fritter'));
 console.log("I just put something in the basket(expect apple fritter)", basket);
 
+basket.push('bread', 'tissue', 'apples', 'bananas');
+console.log("The basket has", basket.length, "items and the basket can hold", maxItems, "items.");
+console.log('Can I put candy in the basket? (expect fasle)', addItems('candy'))
 
+//////Q4
 
-
-
-
-
-
-
-
-
-/*/
 function removeItem(item){
     if(basket.indexOf(item)===-1){
         return null
@@ -92,4 +88,3 @@ console.log(basket)
 console.log("This item was in the basket (expect hairspray)", removeItem("hairspray"));
 
 console.log('This item was not in the basket (expect "null")', removeItem('banana'));
-*/
