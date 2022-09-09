@@ -30,48 +30,55 @@ function empty(){
 
 empty();
 console.log(basket)
+////////////////////////////////////////////////
 
-////
-///
-/* //////////////////This one was kicking my tail. Will return to this one////////////
 const  maxItems = 5;
 
 function isFull(){
-if(basket>=maxItems){
-    return true;
-}else{
+if(basket.length<maxItems){
     return false;
+}else{
+    return true
 }
 };
-
-console.log(basket);
+console.log(maxItems, basket.length);
 console.log("The basket is empty. (expect false)", isFull());
 //Adding items to basket to test the isFull function
 basket= ['pie', 'apples', 'greens', 'bread', 'grapes'];
+console.log(basket.length, maxItems);
+
 console.log('Added five items (expect true)', isFull());
 
 
 
 function addItems(item){
-    if(isFull()===true){
-    return false;
-    }else{
-    basket.push(item);
-    return true;
-    }  
-    
+    if(isFull()===true){    
+        return false; 
+        }else{
+            basket.push(item);
+            return true;
+        }  
 }
-
-
+    
 console.log("The basket already has", basket.length, "items (expect false)", addItems('berries'));
 
 //Reset basket to empty to test addItem function 
 empty();
 console.log(basket);
 console.log("The basket is empty and we can add an item (expect true)", addItem('apple fritter'));
+console.log("I just put something in the basket(expect apple fritter)", basket);
 
-*/
 
+
+
+
+
+
+
+
+
+
+/*/
 function removeItem(item){
     if(basket.indexOf(item)===-1){
         return null
@@ -82,8 +89,7 @@ function removeItem(item){
 
 basket =['toothpaste', 'soap', 'hairspray', 'deodorant'];
 console.log(basket)
-console.log("This item was in the basket (expect removed item", removeItem("hairspray"));
+console.log("This item was in the basket (expect hairspray)", removeItem("hairspray"));
 
-console.log('This item was not in the basket (expect "null")', removeItem('banana'))
-
-
+console.log('This item was not in the basket (expect "null")', removeItem('banana'));
+*/
